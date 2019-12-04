@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<title>北海旅游网站</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/mask.js"></script>
+<script>
+        $(document).ready(function(){
+            $("#search").click(function () {
+                if($(this).hasClass('close')){
+                    $(this).removeClass("close");
+                    $(".drop-down").css("display","block");
+                }
+                else
+                {
+                    $(this).addClass("close");
+                    $(".drop-down").css("display","none");
+                }
+            });
+        });
+		function SiteSearch(send_url, divTgs, channel_name) {
+	    var strwhere = "";
+	    if (channel_name !== undefined) {
+	        strwhere = "&channel_name=" + channel_name
+	    }
+		var str = $.trim($(divTgs).val());
+		if (str.length > 0 && str != "输入关健字") {
+		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+		}
+		return false;
+	}
+    </script>
+</head>
+<body style="background: url(images/timg1.jpg) center top no-repeat;">
+<div class="header">
+	<div class="middle" style="position: relative;">
+		<div class="le a-fadeinL">
+			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
+		</div>
+		<div class="ri a-fadeinR">
+			<ul>
+				<li class="nav"><a href="index.html">首页</a></li>
+<li class="nav"><a href="about.html">北海介绍</a></li>
+<li class="nav on"><a href="gonglue.html">游玩攻略</a></li>
+<li class="nav "><a href="huodong.html">主题活动</a></li>
+<li class="nav"><a href="photo.html">景点图片</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main1 main3">
+	<div class="main2">
+		<div class="up">
+			<a class="a-fadeinL" href="index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">游玩攻略</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">主题餐饮</span>
+		</div>
+		<div class="down">
+			<div class="left">
+				<ul class="list" id="side_left">
+					<li class="tips current a-bouncein">
+					<a href="gonglue.html"><strong>餐饮篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="hotle.html"><strong>住宿篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="play.html"><strong>游玩篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="shopping.html"><strong>购物篇</strong></a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="mid mid1">
+					<ul class="travel-tips">
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/华莱士.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								华莱士
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">07792022505</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">同和水岸店</li>
+								</ul>
+							</div>
+							<div class="illustrate">
+								华莱士于2018年08月23日年注册在银海区广东路邻家地产旁<br />
+								营业时间：周一至周日 08：00-22：00
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/外沙疍家棚酒楼.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								外沙疍家棚酒楼
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">0779-2087088</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">外沙海鲜岛印尼餐饮区西区20栋</li>
+								</ul>
+							</div>
+							<div class="illustrate">
+								当地知名餐厅！按照当地物价也算价格不菲，亦是旅游者常去地！食物还算好吃，腰果沙虫，西蓝花海参，番茄海鲜羹，炒海猪肉，烧腊，核桃包，流沙包⋯⋯还是很多个菜做得蛮好吃！大厅环境不好，海边的玻璃房包厢很不错！推荐！
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/越乡小厨.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								越乡小厨
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">暂无</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">侨南路与小港北二路交叉口西行50米路南</li>
+								</ul>
+							</div>
+							<div class="illustrate">
+								​　特色美食：<br />
+                                                                    海鲜粥 , 烤粉丝扇贝 , 香草虾 , 越南春卷 , 越南水果捞 , 炒粉 , 芒果绵绵冰 , 椒盐皮皮虾 , 烤生蚝 , 酱爆鱿鱼
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/花乐餐厅(涠洲岛店).jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								花乐餐厅(涠洲岛店)
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">暂无</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">南湾街146号(酒吧街隔壁)</li>
+								</ul>
+							</div>
+							<div class="illustrate">
+								特色美食：<br />
+                                                               香蕉猪回锅肉 , 秘制蒸鲍鱼 , 辣炒兰花蟹 , 香爆花甲 , 麻辣虾 , 香辣花甲 , 椒盐皮皮虾 , 海鲜炒饭 , 蒜蓉粉丝蒸扇贝 , 蒜蓉蒸野生生蚝
+							</div>
+						</div>
+						</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer" id="bottom-nav">
+	<div class="left">
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

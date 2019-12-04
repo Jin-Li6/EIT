@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<title>北海旅游网站</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/mask.js"></script>
+<script>
+        $(document).ready(function(){
+            $("#search").click(function () {
+                if($(this).hasClass('close')){
+                    $(this).removeClass("close");
+                    $(".drop-down").css("display","block");
+                }
+                else
+                {
+                    $(this).addClass("close");
+                    $(".drop-down").css("display","none");
+                }
+            });
+        });
+		function SiteSearch(send_url, divTgs, channel_name) {
+	    var strwhere = "";
+	    if (channel_name !== undefined) {
+	        strwhere = "&channel_name=" + channel_name
+	    }
+		var str = $.trim($(divTgs).val());
+		if (str.length > 0 && str != "输入关健字") {
+		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+		}
+		return false;
+	}
+    </script>
+</head>
+<body style="background: url(picture/香格里拉酒店.jpg) center top no-repeat;">
+<div class="header">
+	<div class="middle" style="position: relative;">
+		<div class="le a-fadeinL">
+			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
+		</div>
+		<div class="ri a-fadeinR">
+			<ul>
+				<li class="nav"><a href="index.html">首页</a></li>
+<li class="nav"><a href="about.html">北海介绍</a></li>
+<li class="nav on"><a href="gonglue.html">游玩攻略</a></li>
+<li class="nav "><a href="huodong.html">主题活动</a></li>
+<li class="nav"><a href="photo.html">景点图片</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main1 main3">
+	<div class="main2">
+		<div class="up">
+			<a class="a-fadeinL" href="index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">游玩攻略</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">酒店居住</span>
+		</div>
+		<div class="down">
+			<div class="left">
+				<ul class="list" id="side_left">
+					<li class="tips current a-bouncein">
+					<a href="gonglue.html"><strong>餐饮篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="hotle.html"><strong>住宿篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="play.html"><strong>游玩篇</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="shopping.html"><strong>购物篇</strong></a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="mid mid1">
+					<ul class="travel-tips">
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/香格里拉酒店.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								香格里拉酒店
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">(0779)2062288</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">北海市海城区茶亭路33号</li>
+								</ul>
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/北海富丽华大酒店.webp">
+						</div>
+						<div class="intro">
+							<div class="name">
+								北海富丽华大酒店
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">86-779-2088888</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">北海茶亭路31号 </li>
+								</ul>
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/北海美丽时光公寓酒店.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								北海美丽时光公寓酒店
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">15278995577</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text"> 广西壮族自治区北海市银海区恒大御景半岛26栋2单元320</li>
+								</ul>
+							</div>
+						</div>
+						</a>
+						</li>
+						<li class="content a-fadeinR">
+						<a href="#">
+						<div class="picture">
+							<img src="picture/简爱假日酒店.jpg">
+						</div>
+						<div class="intro">
+							<div class="name">
+								简爱假日酒店
+							</div>
+							<div class="place">
+								<ul>
+									<li><img src="picture/phone.png" alt=""/></li>
+									<li class="text">暂无</li>
+									<li><img src="picture/place.png" alt=""/></li>
+									<li class="text">北海银海区上海路与金海岸大道交汇处皇家海湾公馆5幢2单元0307号</li>
+								</ul>
+							</div>
+						</div>
+						</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer" id="bottom-nav">
+	<div class="left">
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

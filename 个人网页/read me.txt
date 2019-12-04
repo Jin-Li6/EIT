@@ -1,0 +1,17 @@
+1.bootstr.min.css 、 bootstrap-them.min.css 、font-awesome.min.css、animate.min.css、
+jquery-3.1.0min.js、bootstrap.min.js是从网上找来的脚本
+
+
+2.源代码 、main.css、script.js是自己写的
+
+
+3.通过撰写script.js实现判定功能，使一个网页有多个网页功能
+
+
+4.添加有背景音乐，碍于美观，播放器宽和高都调为0，位于代码前面，注释有，容易找到
+
+
+4.使用版本：用dw2018写的，亲测CS6版本使用有点卡顿
+
+
+5.目前只用Google打开过，其它浏览器没用使用过

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<title>北海旅游网站</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/mask.js"></script>
+<script>
+        $(document).ready(function(){
+            $("#search").click(function () {
+                if($(this).hasClass('close')){
+                    $(this).removeClass("close");
+                    $(".drop-down").css("display","block");
+                }
+                else
+                {
+                    $(this).addClass("close");
+                    $(".drop-down").css("display","none");
+                }
+            });
+        });
+		function SiteSearch(send_url, divTgs, channel_name) {
+	    var strwhere = "";
+	    if (channel_name !== undefined) {
+	        strwhere = "&channel_name=" + channel_name
+	    }
+		var str = $.trim($(divTgs).val());
+		if (str.length > 0 && str != "输入关健字") {
+		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+		}
+		return false;
+	}
+		
+		
+   </script>
+</head>
+<body style="background: url(images/timg4.jpg) center top no-repeat; ">
+<div class="header">
+	<div class="middle" style="position: relative;">
+		<div class="le a-fadeinL">
+			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
+		</div>
+		<div class="ri a-fadeinR">
+			<ul>
+				<li class="nav"><a href="index.html">首页</a></li>
+<li class="nav on"><a href="about.html">北海介绍</a></li>
+<li class="nav "><a href="gonglue.html">游玩攻略</a></li>
+<li class="nav "><a href="huodong.html">主题活动</a></li>
+<li class="nav"><a href="photo.html"> 景点图片</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main1 main3">
+	<div class="main2">
+		<div class="up">
+			<a class="a-fadeinL" href="#">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">北海介绍</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL"></span>
+		</div>
+		<div class="down">
+			<div class="left">
+				<ul class="list" id="side_left">
+					<li class="tips current a-bouncein">
+					<a href="#"><strong>北海简介</strong></a></li>
+					<li class="tips a-bouncein">
+					<a href="#"><strong>历史沿革</strong></a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="mid mid1" style="font-size: 16px;line-height: 25px;">
+					<h3 style="text-align: center;">北海简介</h3>
+					<div class="article">
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　</span>
+							<span style="font-size: 14px; font-family: SimSun;">　
+								北海，是广西壮族自治区地级市，地处广西壮族自治区南端，北部湾东北岸。西北距首府南宁206公里，东距广东湛江198公里，东南距海南海口市147海里。地势总体呈北高南低，地形平坦开阔；气候属海洋性季风气候，具有典型的亚热带特色；下辖3个区、1个县，总面积3337平方千米；2017年总人口175.42万人。
+							</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　北海是古代“海上丝绸之路”的重要始发港，是国家历史文化名城、广西北部湾经济区重要组成城市。北海区位优势突出，地处华南经济圈、西南经济圈和东盟经济圈的结合部，处于泛北部湾经济合作区域结合部的中心位置，是中国西部地区唯一列入全国首批14个进一步对外开放的沿海城市，也是中国西部唯一同时拥有深水海港、全天候机场、高速铁路和高速公路的城市。
+							</span>
+							
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　
+								2017年，北海市完成地区生产总值1229.84亿元，按可比价计算，较上年增长10.2%。其中，第一产业实现增加值190.54亿元，增长3.7%；第二产业实现增加值668.66亿元，增长10.5%；第三产业实现增加值370.64亿元，增长13.3%。三次产业的结构比例为15.5：54.4：30.1，对经济增长的贡献率分别为6.2%、52.5%、41.3%，人均地区生产总值74378元。
+								 [2]  2018年11月，入选中国城市全面小康指数前100名。</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;"><br>
+							</span>
+						</p>
+						<section class="135editor" data-id="86152" data-color="rgb(216, 40, 33)" data-custom="rgb(216, 40, 33)" style="position: static; box-sizing: border-box; border: 0px none; padding: 0px; display: inline !important;"><section style="margin-top: 10px; margin-bottom: 10px; position: static; display: inline !important;"><section style="display: inline-block; vertical-align: middle; font-size: 19.2px; padding-left: 10px;"><section class="135brush" data-brushtype="text" style="display: inline !important;"><section class="135editor" data-id="85900" style="position: static; box-sizing: border-box; border: 0px none; padding: 0px; display: inline !important;"><section style="margin: 5px auto; text-align: center; display: inline !important;"><section style="height: 36px; display: inline-block; color: rgb(255, 255, 255); font-size: 16px; margin-left: -12px; padding: 0px 15px; line-height: 36px; border-radius: 10px; background-color: rgb(235, 103, 148);">
+							<strong>​历史沿革</strong></section></section></section></section></section></section></section><strong style="font-size: 19.2px; line-height: 1.5;">​</strong>
+						<p>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;"><br>
+							</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">​　　广西北海市的“北海”一名来自其海城区地角镇的同名渔村“北海村”，由于此地最早开发人群都是疍家渔民，他们长年集中居住在靠近避风港的村落，该避风港面向北面海域（北海市是个半岛），所以此村得名“北海村”。
+“朝沧梧而夕北海”，北海的名字很早就有了，北海地名的形成，定位于康熙元年（1662年），清政府设“北海镇标”作为“北海”地名的称谓。由于此种说法转述频繁、引证广泛，因此成为一个定例。据文史资料记载，“北海”一词可追溯至宋朝甚至是魏晋南北朝时期，这个时期，“北海”更多的是被外国人所称呼。1965年6月，北海由广东省划归广西壮族自治区，北海之名也一直沿用至今。
+</span><span style="font-size: 14px; font-family: SimSun;"></span><span style="font-size: 14px; font-family: SimSun;"></span>
+
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun; background-color: rgb(102, 102, 102);"><strong><strong style="font-family: SimSun; font-size: 14px; white-space: normal;"></strong></strong></span>
+						</p>
+						<section class="135editor" data-id="86152" data-color="rgb(216, 40, 33)" data-custom="rgb(216, 40, 33)" style="position: static; box-sizing: border-box; border: 0px none; padding: 0px;"><section style="margin-top: 10px; margin-bottom: 10px; position: static;"><section style="display: inline-block; vertical-align: middle; font-size: 19.2px; padding-left: 10px;"><section class="135brush" data-brushtype="text"><section class="135editor" data-id="85900" style="position: static; box-sizing: border-box; border: 0px none; padding: 0px;"><section style="margin: 5px auto; text-align: center;"><section style="height: 36px; display: inline-block; color: rgb(255, 255, 255); font-size: 16px; margin-left: -12px; padding: 0px 15px; line-height: 36px; border-radius: 10px; background-color: rgb(235, 103, 148);"><strong><strong style="font-family: SimSun; font-size: 14px; white-space: normal;"><strong>地形地貌</strong></strong></strong></section></section></section></section></section></section></section>
+						<p>
+						</p>
+						<p align="left" class="MsoNormal" style="text-align: center; line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span><img src="picture/timg.jpg" alt="">
+						</p>
+						<p align="left" class="MsoNormal" style="text-align: center; line-height: 150%;">
+							<br>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　北海市境内大陆部分是一个呈犀牛角形的半岛，地势总体呈北高南低，地形平坦开阔，海拔一般较低，属滨海平原；海岛部分地势南高北低，海拔一般比大陆部分稍高，属火山岩台地。滨海平原为大陆区的主要地貌单元，地势平坦，总的趋势由北向南微倾斜，地表略有起伏，南部起伏甚小，北部起伏略大，组成物质为第四纪的粘土质砂、砂质粘土和砾砂等松散沉积物；属以冲积为主的滨海平原。其上零星散布着基岩孤立残丘，发育数条小河流、小溪，沿海岸发育海成地貌，西北部为海蚀地貌，南部为海积地貌。海岸地貌分布于大陆区、涠洲岛、斜阳岛沿岸，分为海蚀地貌和海积地貌两类型。</span> 
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span>
+						
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun;">　　</span>
+						</p>
+						<p align="left" class="MsoNormal" style="line-height: 150%;">
+							<span style="font-size: 14px; font-family: SimSun; background-color: rgb(102, 102, 102);"><strong><strong style="font-family: SimSun; font-size: 14px; white-space: normal;"><strong></strong></strong></strong></span>
+						</p>
+						
+						
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer" id="bottom-nav">
+	<div class="left">
+		
+	</div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>
