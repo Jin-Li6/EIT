@@ -1,118 +1,122 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head lang="en">
-<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animation.css">
-<title>北海旅游网站</title>
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/mask.js"></script>
-<script>
-        $(document).ready(function(){
-            $("#search").click(function () {
-                if($(this).hasClass('close')){
-                    $(this).removeClass("close");
-                    $(".drop-down").css("display","block");
-                }
-                else
-                {
-                    $(this).addClass("close");
-                    $(".drop-down").css("display","none");
-                }
-            });
-        });
+	<meta name="baidu-site-verification" content="KSzoeJhuvK" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<title>北海旅游网站</title>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/mask.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#search").click(function () {
+				if ($(this).hasClass('close')) {
+					$(this).removeClass("close");
+					$(".drop-down").css("display", "block");
+				} else {
+					$(this).addClass("close");
+					$(".drop-down").css("display", "none");
+				}
+			});
+		});
+
 		function SiteSearch(send_url, divTgs, channel_name) {
-	    var strwhere = "";
-	    if (channel_name !== undefined) {
-	        strwhere = "&channel_name=" + channel_name
-	    }
-		var str = $.trim($(divTgs).val());
-		if (str.length > 0 && str != "输入关健字") {
-		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			var strwhere = "";
+			if (channel_name !== undefined) {
+				strwhere = "&channel_name=" + channel_name
+			}
+			var str = $.trim($(divTgs).val());
+			if (str.length > 0 && str != "输入关健字") {
+				window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			}
+			return false;
 		}
-		return false;
-	}
-    </script>
+	</script>
 </head>
+
 <body style="background: url(images/2.jpg) center top no-repeat;">
-<div class="header">
-	<div class="middle" style="position: relative;">
-		<div class="le a-fadeinL">
-			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
-		</div>
-		<div class="ri a-fadeinR">
-			<ul>
-				<li class="nav"><a href="index.html">首页</a></li>
-<li class="nav"><a href="about.html">北海介绍</a></li>
-<li class="nav"><a href="gonglue.html">游玩攻略</a></li>
-<li class="nav"><a href="huodong.html">主题活动</a></li>
-<li class="nav on"><a href="photo.html">景点图片</a></li>
-			</ul>
+	<div class="header">
+		<div class="middle" style="position: relative;">
+			<div class="le a-fadeinL">
+				<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
+			</div>
+			<div class="ri a-fadeinR">
+				<ul>
+					<li class="nav"><a href="index.html">首页</a></li>
+					<li class="nav"><a href="about.html">北海介绍</a></li>
+					<li class="nav"><a href="gonglue.html">游玩攻略</a></li>
+					<li class="nav"><a href="huodong.html">主题活动</a></li>
+					<li class="nav on"><a href="photo.html">景点图片</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="main1" style="height: 1030px;">
-	<div class="main2" style="height: 1030px;">
-		<div class="up">
-			<a class="a-fadeinL" href="/index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">北海老街</span>
-		</div>
-		<div class="down" style="height: 980px;">
-			<div class="mid mid2" id="mid">
-				<ul class="images" id="image">
-					<li class="a-bouncein">
-					<a href="/yinxianglaojie_article-300-6240.html">
-					<div class="images1">
-						<img src="picture/北海银滩.jpg">
+	<div class="main1" style="height: 1030px;">
+		<div class="main2" style="height: 1030px;">
+			<div class="up">
+				<a class="a-fadeinL" href="/index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span
+					class="a-fadeinL">北海老街</span>
+			</div>
+			<div class="down" style="height: 980px;">
+				<div class="mid mid2" id="mid">
+					<ul class="images" id="image">
+						<li class="a-bouncein">
+							<a href="/yinxianglaojie_article-300-6240.html">
+								<div class="images1">
+									<img src="picture/北海银滩.jpg">
+								</div>
+								<div class="text3">
+									北海银滩
+								</div>
+							</a>
+						</li>
+						<li class="a-bouncein">
+							<a href="/yinxianglaojie_article-300-6096.html">
+								<div class="images1">
+									<img src="picture/涠洲岛.jpg">
+								</div>
+								<div class="text3">
+									涠洲岛
+								</div>
+							</a>
+						</li>
+						<li class="a-bouncein">
+							<a href="/yinxianglaojie_article-300-6097.html">
+								<div class="images1">
+									<img src="picture/北海老街.jpg">
+								</div>
+								<div class="text3">
+									北海老街
+								</div>
+							</a>
+						</li>
+						<li class="a-bouncein">
+							<a href="/yinxianglaojie_article-300-6098.html">
+								<div class="images1">
+									<img src="picture/北海公园.jpg">
+								</div>
+								<div class="text3">
+									北海公园
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="pages11" style="width: 900px">
+						<span>共6记录</span><span class="disabled">«上一页</span><span class="current">1</span><a
+							href="photo_content.html">2</a><a href="photo_content.html">下一页</a>
 					</div>
-					<div class="text3">
-						北海银滩
-					</div>
-					</a>
-					</li>
-					<li class="a-bouncein">
-					<a href="/yinxianglaojie_article-300-6096.html">
-					<div class="images1">
-						<img src="picture/涠洲岛.jpg">
-					</div>
-					<div class="text3">
-						涠洲岛
-					</div>
-					</a>
-					</li>
-					<li class="a-bouncein">
-					<a href="/yinxianglaojie_article-300-6097.html">
-					<div class="images1">
-						<img src="picture/北海老街.jpg">
-					</div>
-					<div class="text3">
-						北海老街
-					</div>
-					</a>
-					</li>
-					<li class="a-bouncein">
-					<a href="/yinxianglaojie_article-300-6098.html">
-					<div class="images1">
-						<img src="picture/北海公园.jpg">
-					</div>
-					<div class="text3">
-						北海公园
-					</div>
-					</a>
-					</li>
-				</ul>
-				<div class="pages11" style="width: 900px">
-					<span>共6记录</span><span class="disabled">«上一页</span><span class="current">1</span><a href="photo_content.html">2</a><a href="photo_content.html">下一页</a>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="footer" id="bottom-nav">
-	<div class="left">
-		
-</div>
-<script src="js/common.js"></script>
+	<div class="footer" id="bottom-nav">
+		<div class="left">
+
+		</div>
+		<script src="js/common.js"></script>
 </body>
+
 </html>

@@ -1,154 +1,164 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
-<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animation.css">
-<title>北海旅游网站</title>
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/mask.js"></script>
-<script>
-        $(document).ready(function(){
-            $("#search").click(function () {
-                if($(this).hasClass('close')){
-                    $(this).removeClass("close");
-                    $(".drop-down").css("display","block");
-                }
-                else
-                {
-                    $(this).addClass("close");
-                    $(".drop-down").css("display","none");
-                }
-            });
-        });
+	<meta name="baidu-site-verification" content="KSzoeJhuvK" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<title>北海旅游网站</title>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/mask.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#search").click(function () {
+				if ($(this).hasClass('close')) {
+					$(this).removeClass("close");
+					$(".drop-down").css("display", "block");
+				} else {
+					$(this).addClass("close");
+					$(".drop-down").css("display", "none");
+				}
+			});
+		});
+
 		function SiteSearch(send_url, divTgs, channel_name) {
-	    var strwhere = "";
-	    if (channel_name !== undefined) {
-	        strwhere = "&channel_name=" + channel_name
-	    }
-		var str = $.trim($(divTgs).val());
-		if (str.length > 0 && str != "输入关健字") {
-		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			var strwhere = "";
+			if (channel_name !== undefined) {
+				strwhere = "&channel_name=" + channel_name
+			}
+			var str = $.trim($(divTgs).val());
+			if (str.length > 0 && str != "输入关健字") {
+				window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			}
+			return false;
 		}
-		return false;
-	}
-    </script>
+	</script>
 </head>
+
 <body style="background: url(picture/购物.jpg) center top no-repeat;">
-<div class="header">
-	<div class="middle" style="position: relative;">
-		<div class="le a-fadeinL">
-			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"><img src="picture/search.png" alt=""/></span>
-		</div>
-		<div class="drop-down">
-			<input id="keywords" name="keywords" class="form-control" type="text" x-webkit-speech="" placeholder="一种情怀 一种生活" onkeydown="if(event.keyCode==13){SiteSearch('search.html', '#keywords');return false};"/>
-			<span class="input-group-btn" style="width: 22px;height: 22px;position: absolute;left: 280px;top: 16px;">
-			<button style="border: 0;background-color: #ffffff;" class="btn btn-default" type="button" onclick="SiteSearch('search.html', '#keywords');"><img src="picture/search1.png" alt=""/></button>
-			</span>
-		</div>
-		<div class="ri a-fadeinR">
-			<ul>
-				<li class="nav"><a href="index.html">首页</a></li>
-<li class="nav"><a href="about.html">北海介绍</a></li>
-<li class="nav on"><a href="gonglue.html">游玩攻略</a></li>
-<li class="nav "><a href="huodong.html">主题活动</a></li>
-<li class="nav"><a href="photo.html">景点图片</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div class="main1 main3">
-	<div class="main2">
-		<div class="up">
-			<a class="a-fadeinL" href="index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">游玩攻略</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">特色零售</span>
-		</div>
-		<div class="down">
-			<div class="left">
-				<ul class="list" id="side_left">
-					<li class="tips current a-bouncein">
-					<a href="gonglue.html"><strong>餐饮篇</strong></a></li>
-					<li class="tips a-bouncein">
-					<a href="hotle.html"><strong>住宿篇</strong></a></li>
-					<li class="tips a-bouncein">
-					<a href="play.html"><strong>游玩篇</strong></a></li>
-					<li class="tips a-bouncein">
-					<a href="shopping.html"><strong>购物篇</strong></a></li>
+	<div class="header">
+		<div class="middle" style="position: relative;">
+			<div class="le a-fadeinL">
+				<a href="#"><img src="picture/title.png"></a><span class="close" id="search"><img
+						src="picture/search.png" alt="" /></span>
+			</div>
+			<div class="drop-down">
+				<input id="keywords" name="keywords" class="form-control" type="text" x-webkit-speech=""
+					placeholder="一种情怀 一种生活"
+					onkeydown="if(event.keyCode==13){SiteSearch('search.html', '#keywords');return false};" />
+				<span class="input-group-btn"
+					style="width: 22px;height: 22px;position: absolute;left: 280px;top: 16px;">
+					<button style="border: 0;background-color: #ffffff;" class="btn btn-default" type="button"
+						onclick="SiteSearch('search.html', '#keywords');"><img src="picture/search1.png"
+							alt="" /></button>
+				</span>
+			</div>
+			<div class="ri a-fadeinR">
+				<ul>
+					<li class="nav"><a href="index.html">首页</a></li>
+					<li class="nav"><a href="about.html">北海介绍</a></li>
+					<li class="nav on"><a href="gonglue.html">游玩攻略</a></li>
+					<li class="nav "><a href="huodong.html">主题活动</a></li>
+					<li class="nav"><a href="photo.html">景点图片</a></li>
 				</ul>
 			</div>
-			<div class="right">
-				<div class="mid mid1">
-					<ul class="travel-tips">
-						<li class="content a-fadeinR">
-						<a href="#">
-						<div class="picture">
-							<img src="picture/海洋工艺品.jpg">
-						</div>
-						<div class="intro">
-							<div class="name">
-								海洋工艺品
-							</div>
-							<div class="illustrate">
-								有贝雕、珍珠项链、手链、贝壳风铃、手机链等，样式齐全，色彩斑斓，是一种特色精致的挂摆饰品，适合做纪念品留念或送朋友。在老街等景点处都有散摊摆卖
-							</div>
-						</div>
-						</a>
-						</li>
-						<li class="content a-fadeinR">
-						<a href="#">
-						<div class="picture">
-							<img src="picture/南珠.jpg">
-						</div>
-						<div class="intro">
-							<div class="name">
-								南珠
-							</div>
-							<div class="illustrate">
-								北海盛产“南珠”，有“南珠之乡”之称。所产“南珠”以凝重结实、硕大圆润、晶莹夺目、光泽耐久而驰名中外，自古享有“东珠不如西珠，西珠不如南珠”的盛誉。一直是外地游客热衷购买的特产之首。
-							</div>
-						</div>
-						</a>
-						</li>
-						<li class="content a-fadeinR">
-						<a href="#">
-						<div class="picture">
-							<img src="picture/大润发.jpg">
-						</div>
-						<div class="intro">
-							<div class="name">
-								大润发
-							</div>
-							<div class="illustrate">
-								​　大润发位于市中心，是北海一家颇具规模的综合服务性超市。超市内商品齐全，一楼有首饰、服装、连锁小吃等；二楼和三楼是超市，超市的入口在三层；三楼主要卖日用品、特卖服装等。
-							</div>
-						</div>
-						</a>
-						</li>
-						<li class="content a-fadeinR">
-						<a href="#">
-						<div class="picture">
-							<img src="picture/北海市水产市场.jpg">
-						</div>
-						<div class="intro">
-							<div class="name">
-								北海市水利市场)
-							</div>
-							<div class="illustrate">
-								北海市水产市场是北海一家颇具规模的海鲜水产市场。水产市场由一百多家个体商铺组成，售卖的海产品大多是晒干做成，品质应有尽有。
-							</div>
-						</div>
-						</a>
-						</li>
+		</div>
+	</div>
+	<div class="main1 main3">
+		<div class="main2">
+			<div class="up">
+				<a class="a-fadeinL" href="index.html">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span
+					class="a-fadeinL">游玩攻略</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span
+					class="a-fadeinL">特色零售</span>
+			</div>
+			<div class="down">
+				<div class="left">
+					<ul class="list" id="side_left">
+						<li class="tips current a-bouncein">
+							<a href="gonglue.html"><strong>餐饮篇</strong></a></li>
+						<li class="tips a-bouncein">
+							<a href="hotle.html"><strong>住宿篇</strong></a></li>
+						<li class="tips a-bouncein">
+							<a href="play.html"><strong>游玩篇</strong></a></li>
+						<li class="tips a-bouncein">
+							<a href="shopping.html"><strong>购物篇</strong></a></li>
 					</ul>
+				</div>
+				<div class="right">
+					<div class="mid mid1">
+						<ul class="travel-tips">
+							<li class="content a-fadeinR">
+								<a href="#">
+									<div class="picture">
+										<img src="picture/海洋工艺品.jpg">
+									</div>
+									<div class="intro">
+										<div class="name">
+											海洋工艺品
+										</div>
+										<div class="illustrate">
+											有贝雕、珍珠项链、手链、贝壳风铃、手机链等，样式齐全，色彩斑斓，是一种特色精致的挂摆饰品，适合做纪念品留念或送朋友。在老街等景点处都有散摊摆卖
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="content a-fadeinR">
+								<a href="#">
+									<div class="picture">
+										<img src="picture/南珠.jpg">
+									</div>
+									<div class="intro">
+										<div class="name">
+											南珠
+										</div>
+										<div class="illustrate">
+											北海盛产“南珠”，有“南珠之乡”之称。所产“南珠”以凝重结实、硕大圆润、晶莹夺目、光泽耐久而驰名中外，自古享有“东珠不如西珠，西珠不如南珠”的盛誉。一直是外地游客热衷购买的特产之首。
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="content a-fadeinR">
+								<a href="#">
+									<div class="picture">
+										<img src="picture/大润发.jpg">
+									</div>
+									<div class="intro">
+										<div class="name">
+											大润发
+										</div>
+										<div class="illustrate">
+											​　大润发位于市中心，是北海一家颇具规模的综合服务性超市。超市内商品齐全，一楼有首饰、服装、连锁小吃等；二楼和三楼是超市，超市的入口在三层；三楼主要卖日用品、特卖服装等。
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="content a-fadeinR">
+								<a href="#">
+									<div class="picture">
+										<img src="picture/北海市水产市场.jpg">
+									</div>
+									<div class="intro">
+										<div class="name">
+											北海市水利市场)
+										</div>
+										<div class="illustrate">
+											北海市水产市场是北海一家颇具规模的海鲜水产市场。水产市场由一百多家个体商铺组成，售卖的海产品大多是晒干做成，品质应有尽有。
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="footer" id="bottom-nav">
-	<div class="left">
-</div>
-<script src="js/common.js"></script>
+	<div class="footer" id="bottom-nav">
+		<div class="left">
+		</div>
+		<script src="js/common.js"></script>
 </body>
+
 </html>

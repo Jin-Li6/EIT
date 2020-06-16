@@ -1,38 +1,56 @@
 function ShakeObj(elem, range, startFunc, endFunc) {
 	var curMax = range = range || 6;
-   	startFunc = startFunc || function(){};
-	endFunc = endFunc || function(){};
+	startFunc = startFunc || function () {};
+	endFunc = endFunc || function () {};
 	var drct = 0;
 	var step = 1;
 
 	init();
 
-	function init() { elem.style.position = 'relative';active() }
-	function active() { elem.onmouseover = function(e) {if(!drct)shake()} }
-	function deactive() { elem.onmouseover = null }
+	function init() {
+		elem.style.position = 'relative';
+		active()
+	}
+
+	function active() {
+		elem.onmouseover = function (e) {
+			if (!drct) shake()
+		}
+	}
+
+	function deactive() {
+		elem.onmouseover = null
+	}
 
 	function shake() {
-		 var t = parseInt(elem.style.top);
+		var t = parseInt(elem.style.top);
 		if (!drct) motionStart();
 		else {
 			var nextTop = t - step * drct;
 			if (nextTop >= -curMax && nextTop <= 0) elem.style.top = nextTop + 'px';
-			else if(nextTop < -curMax) drct = -1;
-		   else {
+			else if (nextTop < -curMax) drct = -1;
+			else {
 				var nextMax = curMax / 2;
-				if (nextMax < 1) {motionOver();return;}
+				if (nextMax < 1) {
+					motionOver();
+					return;
+				}
 				curMax = nextMax;
 				drct = 1;
 			}
 		}
-		setTimeout(function(){shake()}, 200 / (curMax+3) + drct * 3);
-	 }
+		setTimeout(function () {
+			shake()
+		}, 200 / (curMax + 3) + drct * 3);
+	}
+
 	function motionStart() {
 		startFunc.apply(this);
-		elem.style.top='0';
+		elem.style.top = '0';
 		drct = 1;
 	}
-	  function motionOver() {
+
+	function motionOver() {
 		endFunc.apply(this);
 		curMax = range;
 		drct = 0;

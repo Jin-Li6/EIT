@@ -1,116 +1,120 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head lang="en">
-<meta name="baidu-site-verification" content="KSzoeJhuvK"/>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animation.css">
-<title>北海旅游网站</title>
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/mask.js"></script>
-<script>
-        $(document).ready(function(){
-            $("#search").click(function () {
-                if($(this).hasClass('close')){
-                    $(this).removeClass("close");
-                    $(".drop-down").css("display","block");
-                }
-                else
-                {
-                    $(this).addClass("close");
-                    $(".drop-down").css("display","none");
-                }
-            });
-        });
+	<meta name="baidu-site-verification" content="KSzoeJhuvK" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<title>北海旅游网站</title>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/mask.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#search").click(function () {
+				if ($(this).hasClass('close')) {
+					$(this).removeClass("close");
+					$(".drop-down").css("display", "block");
+				} else {
+					$(this).addClass("close");
+					$(".drop-down").css("display", "none");
+				}
+			});
+		});
+
 		function SiteSearch(send_url, divTgs, channel_name) {
-	    var strwhere = "";
-	    if (channel_name !== undefined) {
-	        strwhere = "&channel_name=" + channel_name
-	    }
-		var str = $.trim($(divTgs).val());
-		if (str.length > 0 && str != "输入关健字") {
-		    window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			var strwhere = "";
+			if (channel_name !== undefined) {
+				strwhere = "&channel_name=" + channel_name
+			}
+			var str = $.trim($(divTgs).val());
+			if (str.length > 0 && str != "输入关健字") {
+				window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+			}
+			return false;
 		}
-		return false;
-	}
-    </script>
+	</script>
 </head>
+
 <body style="background: url(images/1.jpg) center top no-repeat;">
-<div class="header">
-	<div class="middle" style="position: relative;">
-		<div class="le a-fadeinL">
-			<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
-		</div>
-		<div class="ri a-fadeinR">
-			<ul>
-				<li class="nav"><a href="index.html">首页</a></li>
-<li class="nav"><a href="about.html">北海介绍</a></li>
-<li class="nav"><a href="gonglue.html">游玩攻略</a></li>
-<li class="nav on"><a href="huodong.html">主题活动</a></li>
-<li class="nav"><a href="photo.html">景点图片</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div class="main1 main3" style="min-height: 970px;">
-	<div class="main2" style="min-height: 970px;">
-		<div class="up">
-			<a class="a-fadeinL" href="#">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">主题活动</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span class="a-fadeinL">往期活动</span>
-		</div>
-		<div class="down" style="min-height: 925px;">
-			<div class="left" style="min-height: 925px;">
-				<ul class="list" id="side_left">
-					<li class="tips a-bouncein">
-					<a href="#"><strong>往期活动</strong></a></li>
-					<li class="tips current a-bouncein">
-					<a href="#"><strong>正在进行</strong></a></li>
+	<div class="header">
+		<div class="middle" style="position: relative;">
+			<div class="le a-fadeinL">
+				<a href="#"><img src="picture/title.png"></a><span class="close" id="search"></span>
+			</div>
+			<div class="ri a-fadeinR">
+				<ul>
+					<li class="nav"><a href="index.html">首页</a></li>
+					<li class="nav"><a href="about.html">北海介绍</a></li>
+					<li class="nav"><a href="gonglue.html">游玩攻略</a></li>
+					<li class="nav on"><a href="huodong.html">主题活动</a></li>
+					<li class="nav"><a href="photo.html">景点图片</a></li>
 				</ul>
 			</div>
-			<div class="right" style="min-height: 925px;">
-				<div class="mid" style="min-height: 840px;">
-					<ul class="tes3">
-						<li class="activity-introduce a-fadeinR">
-						<a href="#">
-						<div class="img">
-							<img src="picture/彩虹泡泡.png" alt=""/>
-						</div>
-						<div class="doing">
-							已结束
-						</div>
-						<div class="float">
-							<span style="width: 450px;float:left;">北海吾悦广场LoveRun彩虹泡泡跑活动
-							
-							</span>
-							<span style="width: 200px;float:right;">活动时间：2019-05-19</span>
-						</div>
-						</a>
-						</li>
-						<li class="activity-introduce a-fadeinR">
-						<a href="#">
-						<div class="img">
-							<img src="picture/银滩活动.jpeg" alt=""/>
-						</div>
-						<div class="doing">
-							已结束
-						</div>
-						<div class="float">
-							<span style="width: 450px;float:left;">“魅力银滩•浪漫七夕”开幕仪式</span>
-							<span style="width: 200px;float:right;">活动时间：2017年8月26日</span>
-						</div>
-						</a>
-						</li>
+		</div>
+	</div>
+	<div class="main1 main3" style="min-height: 970px;">
+		<div class="main2" style="min-height: 970px;">
+			<div class="up">
+				<a class="a-fadeinL" href="#">首页</a>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span
+					class="a-fadeinL">主题活动</span>&nbsp;<span class="a-fadeinL">></span>&nbsp;<span
+					class="a-fadeinL">往期活动</span>
+			</div>
+			<div class="down" style="min-height: 925px;">
+				<div class="left" style="min-height: 925px;">
+					<ul class="list" id="side_left">
+						<li class="tips a-bouncein">
+							<a href="#"><strong>往期活动</strong></a></li>
+						<li class="tips current a-bouncein">
+							<a href="#"><strong>正在进行</strong></a></li>
 					</ul>
-					
+				</div>
+				<div class="right" style="min-height: 925px;">
+					<div class="mid" style="min-height: 840px;">
+						<ul class="tes3">
+							<li class="activity-introduce a-fadeinR">
+								<a href="#">
+									<div class="img">
+										<img src="picture/彩虹泡泡.png" alt="" />
+									</div>
+									<div class="doing">
+										已结束
+									</div>
+									<div class="float">
+										<span style="width: 450px;float:left;">北海吾悦广场LoveRun彩虹泡泡跑活动
+
+										</span>
+										<span style="width: 200px;float:right;">活动时间：2019-05-19</span>
+									</div>
+								</a>
+							</li>
+							<li class="activity-introduce a-fadeinR">
+								<a href="#">
+									<div class="img">
+										<img src="picture/银滩活动.jpeg" alt="" />
+									</div>
+									<div class="doing">
+										已结束
+									</div>
+									<div class="float">
+										<span style="width: 450px;float:left;">“魅力银滩•浪漫七夕”开幕仪式</span>
+										<span style="width: 200px;float:right;">活动时间：2017年8月26日</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="footer" id="bottom-nav">
-	<div class="left">
-		
-</div>
-<script src="js/common.js"></script>
+	<div class="footer" id="bottom-nav">
+		<div class="left">
+
+		</div>
+		<script src="js/common.js"></script>
 </body>
+
 </html>

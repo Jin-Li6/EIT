@@ -35,17 +35,31 @@
         b = a.extend({}, a.fn.olvSlides.option, b);
         return this.each(function () {
             a(this).children().wrapAll('<div class="' + b.container + '"/>');
-            var B = a(this), o = a("." + b.control, B), q = a("." + b.change, B), g = a(".thumbWrap", B), C = a(".thumbCont", g), H = b.thumb ? H = C.children(":eq(0)").children().size() : H = q.children().size(), h = parseInt(b.start, 10) >= H ? H - 1 : parseInt(b.start - 1, 10), x = o.outerWidth(), t = b.effect, v = 0, u = 0, d = 0, w = 0, m, n, G, E, r, k, F, c, D, p, f, s, z;
+            var B = a(this),
+                o = a("." + b.control, B),
+                q = a("." + b.change, B),
+                g = a(".thumbWrap", B),
+                C = a(".thumbCont", g),
+                H = b.thumb ? H = C.children(":eq(0)").children().size() : H = q.children().size(),
+                h = parseInt(b.start, 10) >= H ? H - 1 : parseInt(b.start - 1, 10),
+                x = o.outerWidth(),
+                t = b.effect,
+                v = 0,
+                u = 0,
+                d = 0,
+                w = 0,
+                m, n, G, E, r, k, F, c, D, p, f, s, z;
             if (H < 2) {
                 o.fadeIn(b.fadeSpeed);
                 a("." + b.next + ", ." + b.prev).fadeOut(0);
                 return false
             }
+
             function j(K, J, I) {
                 if (!m) {
                     m = true;
                     switch (K) {
-                        case"next":
+                        case "next":
                             u = w;
                             v = w + 1;
                             v = H === v ? 0 : v;
@@ -53,7 +67,7 @@
                             K = -x * 2;
                             w = v;
                             break;
-                        case"prev":
+                        case "prev":
                             u = w;
                             v = w - 1;
                             v = v === -1 ? H - 1 : v;
@@ -61,7 +75,7 @@
                             K = 0;
                             w = v;
                             break;
-                        case"pagination":
+                        case "pagination":
                             v = parseInt(I, 10);
                             u = a("." + b.paginationClass + " a." + b.currentClass, B).attr("href").match("[^#/]+$");
                             if (v > u) {
@@ -73,7 +87,7 @@
                             }
                             w = v;
                             break;
-                        case"thumbClick":
+                        case "thumbClick":
                             v = parseInt(I, 10);
                             u = a("li." + b.currentClass, C).data("data");
                             if (v > u) {
@@ -87,17 +101,38 @@
                             break
                     }
                     if (J === "slide") {
-                        q.children(":eq(" + v + ")").css({left: G, display: "block"});
-                        q.animate({left: K}, b.slideSpeed, function () {
-                            q.css({left: -x});
-                            q.children(":eq(" + v + ")").css({left: x, zIndex: 5});
-                            q.children(":eq(" + u + ")").css({left: x, display: "none", zIndex: 0});
+                        q.children(":eq(" + v + ")").css({
+                            left: G,
+                            display: "block"
+                        });
+                        q.animate({
+                            left: K
+                        }, b.slideSpeed, function () {
+                            q.css({
+                                left: -x
+                            });
+                            q.children(":eq(" + v + ")").css({
+                                left: x,
+                                zIndex: 5
+                            });
+                            q.children(":eq(" + u + ")").css({
+                                left: x,
+                                display: "none",
+                                zIndex: 0
+                            });
                             m = false
                         })
                     } else {
-                        q.children(":eq(" + v + ")", B).css({zIndex: 8}).fadeIn(b.fadeSpeed, b.fadeEasing, function () {
-                            q.children(":eq(" + u + ")", B).css({display: "none", zIndex: 0});
-                            q.children(":eq(" + v + ")", B).css({zIndex: 0});
+                        q.children(":eq(" + v + ")", B).css({
+                            zIndex: 8
+                        }).fadeIn(b.fadeSpeed, b.fadeEasing, function () {
+                            q.children(":eq(" + u + ")", B).css({
+                                display: "none",
+                                zIndex: 0
+                            });
+                            q.children(":eq(" + v + ")", B).css({
+                                zIndex: 0
+                            });
                             m = false
                         })
                     }
@@ -116,7 +151,9 @@
                                     c = 0
                                 }
                             }
-                            C.children(":eq(0)").animate({top: c});
+                            C.children(":eq(0)").animate({
+                                top: c
+                            });
                             C.children(":eq(0)").children("li").removeClass("cur");
                             C.children(":eq(0)").children("li:eq(" + w + ")").addClass("cur")
                         } else {
@@ -129,14 +166,16 @@
                                     c = 0
                                 }
                             }
-                            C.children(":eq(0)").animate({left: c});
+                            C.children(":eq(0)").animate({
+                                left: c
+                            });
                             C.children(":eq(0)").children("li").removeClass("cur");
                             C.children(":eq(0)").children("li:eq(" + w + ")").addClass("cur")
                         }
                     }
                 }
                 /* console.log('j:'+$(".cur").index());*/
-                var nowum=$(".cur").index()+1;
+                var nowum = $(".cur").index() + 1;
                 /*
                  $("#cur").html("");
                  */
@@ -145,11 +184,11 @@
 
             function y() {
                 clearInterval(B.data("interval"))
-                console.log('y:'+$(".cur").index());
+                console.log('y:' + $(".cur").index());
             }
 
             function l() {
-                console.log('l:'+$(".cur").index());
+                console.log('l:' + $(".cur").index());
                 if (b.pause) {
                     clearTimeout(B.data("pause"));
                     clearInterval(B.data("interval"));
@@ -175,9 +214,17 @@
             if (b.start) {
                 w = h
             }
-            B.css({overflow: "hidden", position: "relative"});
-            o.css({overflow: "hidden", position: "relative"});
-            o.css({display: "block"});
+            B.css({
+                overflow: "hidden",
+                position: "relative"
+            });
+            o.css({
+                overflow: "hidden",
+                position: "relative"
+            });
+            o.css({
+                display: "block"
+            });
             if (b.thumb) {
                 startT = h + 1;
                 g.show();
@@ -205,9 +252,13 @@
                     });
                     if (b.start > f) {
                         if ("-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) < -p * H + D) {
-                            C.children(":eq(0)").css({top: -p * H + D + "px"})
+                            C.children(":eq(0)").css({
+                                top: -p * H + D + "px"
+                            })
                         } else {
-                            C.children(":eq(0)").css({top: "-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) + "px"})
+                            C.children(":eq(0)").css({
+                                top: "-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) + "px"
+                            })
                         }
                     }
                     a("." + b.thumbPrev, B).click(function (I) {
@@ -239,9 +290,13 @@
                     });
                     if (b.start > f) {
                         if ("-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) < -p * H + D) {
-                            C.children(":eq(0)").css({left: -p * H + D + "px"})
+                            C.children(":eq(0)").css({
+                                left: -p * H + D + "px"
+                            })
                         } else {
-                            C.children(":eq(0)").css({left: "-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) + "px"})
+                            C.children(":eq(0)").css({
+                                left: "-" + Math.ceil((p * startT) - (D / 2) - (p / 2)) + "px"
+                            })
                         }
                     }
                     a("." + b.thumbPrev, B).click(function (I) {
@@ -277,9 +332,13 @@
                         j("thumbClick", t, n)
                     }
                     if (b.thumbDirection === "Y") {
-                        C.children(":eq(0)").animate({top: c}, b.slideSpeed)
+                        C.children(":eq(0)").animate({
+                            top: c
+                        }, b.slideSpeed)
                     } else {
-                        C.children(":eq(0)").animate({left: c}, b.slideSpeed)
+                        C.children(":eq(0)").animate({
+                            left: c
+                        }, b.slideSpeed)
                     }
                     C.children(":eq(0)").children().removeClass(b.currentClass);
                     a(this).addClass(b.currentClass);
@@ -337,9 +396,20 @@
                 }
                 j("next", t)
             });
-            q.children().css({position: "absolute", top: 0, left: o.outerWidth(), zIndex: 0, display: "none"});
-            q.css({position: "relative", width: (x * 3), left: -x});
+            q.children().css({
+                position: "absolute",
+                top: 0,
+                left: o.outerWidth(),
+                zIndex: 0,
+                display: "none"
+            });
+            q.css({
+                position: "relative",
+                width: (x * 3),
+                left: -x
+            });
             q.children(":eq(" + h + ")").fadeIn(b.fadeSpeed);
+
             function e(I) {
                 if (b.thumbDirection == "Y") {
                     if (I == "Prev") {
@@ -355,7 +425,9 @@
                             }
                         }
                     }
-                    C.children(":eq(0)").animate({top: F})
+                    C.children(":eq(0)").animate({
+                        top: F
+                    })
                 } else {
                     if (I == "Prev") {
                         F = F + D;
@@ -370,12 +442,13 @@
                             }
                         }
                     }
-                    C.children(":eq(0)").animate({left: F})
+                    C.children(":eq(0)").animate({
+                        left: F
+                    })
                 }
             }
 
-            function A(I) {
-            }
+            function A(I) {}
 
             if (b.bigTarget) {
                 o.append('<div class="' + b.bigTargetPrev + '"></div><div class="' + b.bigTargetNext + '"></div>');
